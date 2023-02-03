@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_bright"
+    app:circularflow_radiusInDP="5dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtYouHave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="@string/title"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtMoney"
+        android:layout_width="221dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="108dp"
+        android:text="@string/money"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtYouHave"
+        app:layout_constraintHorizontal_bias="0.417"
+        app:layout_constraintStart_toStartOf="@+id/txtYouHave"
+        app:layout_constraintTop_toBottomOf="@+id/txtYouHave" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="145dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/makeItRain"
+        app:layout_constraintEnd_toEndOf="@+id/txtMoney"
+        app:layout_constraintStart_toStartOf="@+id/txtMoney"
+        app:layout_constraintTop_toBottomOf="@+id/txtMoney" />
+
+    <Button
+        android:id="@+id/btnShowTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:onClick="showTag"
+        android:text="@string/show_tag"
+        app:layout_constraintEnd_toEndOf="@+id/btnAdd"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="@+id/btnAdd"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
+</androidx.constraintlayout.widget.ConstraintLayout>
