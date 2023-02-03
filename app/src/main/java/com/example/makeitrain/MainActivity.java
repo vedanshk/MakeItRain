@@ -2,6 +2,7 @@ package com.example.makeitrain;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.NumberFormat;
+import java.util.Collection;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,10 +35,19 @@ public class MainActivity extends AppCompatActivity {
             moneyCounter += 10000;
 
             txtMoney.setText(String.valueOf(numberFormat.format(moneyCounter)));
-            if(moneyCounter >= 100000){
-
-                txtMoney.setTextColor(getResources().getColor(R.color.purple_700));
-            }
+             switch (moneyCounter){
+                 case 20000:
+                     txtMoney.setTextColor(Color.BLACK);
+                     break;
+                 case 40000:
+                     txtMoney.setTextColor(Color.YELLOW);
+                     break;
+                 case 60000:
+                     txtMoney.setTextColor(Color.GREEN);
+                     break;
+                 default:
+                     txtMoney.setTextColor(Color.GRAY);
+             }
         });
 
 
